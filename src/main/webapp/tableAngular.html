@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html ng-app="angular">
+    <head>
+        <title>Test Title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="js/angularApp.js"></script>
+    </head>
+
+    <body >
+        <div class="col-md-1"></div>
+        <div ng-controller="controller" class="col-md-10">
+            <table class="table"">
+                <tr style="background-color: lightblue">
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Eye Color</th>
+                    <th>Email</th>
+                    <th>Friends</th>
+                </tr>
+                <tr ng-repeat="member in data">
+                    <td>{{member.id}}</td>
+                    <td>{{member.name}}</td>
+                    <td>{{member.age}}</td>
+                    <td>{{member.eyeColor}}</td>
+                    <td>{{member.email}}</td>
+                    <td>
+                        <p ng-repeat="friend in member.friends">
+                            {{friend.name}}
+                        </p>
+                    </td> 
+                </tr>
+            </table>
+            <a href='index_1.html'>Back</a>
+        </div>
+        <div class="col-md-1"></div>
+    </body>
+</html>
